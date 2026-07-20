@@ -1,0 +1,25 @@
+generated: '2026-07-18'
+method: searched
+source: >-
+  https://docs.beta.botanalytics.co/docs/integration/rest-api/overview +
+  github.com/botanalytics/node-sdk core/src/base.js
+docs: https://docs.beta.botanalytics.co/docs/integration/rest-api/overview
+summary:
+  types: [http]
+  http_schemes: [bearer]
+  bearer_format: JWT
+  api_key_in: []
+  oauth2_flows: []
+schemes:
+  - name: bearerAuth
+    type: http
+    scheme: bearer
+    bearerFormat: JWT
+    description: >-
+      A Botanalytics API key is a JSON Web Token (JWT). It is sent as
+      `Authorization: Bearer <token>`. The token carries a `channel` claim that
+      must match the client channel; the SDK validates the JWT shape locally
+      before sending. Missing or invalid tokens return HTTP 401.
+    sources:
+      - openapi/botanalytics-messages-openapi.yml
+      - https://github.com/botanalytics/node-sdk/blob/master/core/src/base.js
