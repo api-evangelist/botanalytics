@@ -1,0 +1,100 @@
+openapi: 3.0.3
+info:
+  title: Botanalytics Message Ingestion API
+  version: v2
+  description: >-
+    The Botanalytics REST ingestion API accepts conversational message events from
+    chatbots and voice assistants for analytics processing. This specification is a
+    faithful reconstruction of the single verified ingestion operation exposed by the
+    Botanalytics v2 backend, derived from the first-party Node SDK source
+    (github.com/botanalytics/node-sdk, core/src/base.js) and the public REST API
+    documentation. It is NOT a provider-published OpenAPI document.
+  x-apievangelist-generated: true
+  x-source: >-
+    https://github.com/botanalytics/node-sdk (core/src/base.js) +
+    https://docs.beta.botanalytics.co/docs/integration/rest-api/overview
+  contact:
+    name: Botanalytics
+    url: https://botanalytics.co
+servers:
+  - url: https://api.beta.botanalytics.co/v2
+    description: Botanalytics v2 ingestion (private beta)
+security:
+  - bearerAuth: []
+paths:
+  /messages:
+    post:
+      operationId: logMessages
+      summary: Log conversation messages
+      description: >-
+        Submit a batch of conversation message events to Botanalytics for analytics
+        processing. The Node and Python SDKs wrap this endpoint. Requests are POSTed
+        with a JSON body containing a `messages` array and a Bearer JWT whose `channel`
+        claim identifies the source channel. The SDK retries failed POSTs (default
+        limit 10) with a 30s request timeout.
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MessageBatch'
+      responses:
+        '200':
+          description: Everything worked as expected; messages accepted.
+        '201':
+          description: Messages created.
+        '400':
+          description: >-
+            The request was unacceptable, often due to missing a required parameter.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '401':
+          description: You forgot to include your API token or it is wrong.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: The requested resource doesn't exist.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: >-
+        A Botanalytics API key is a JWT carrying a `channel` claim. Send it as
+        `Authorization: Bearer <token>`.
+  schemas:
+    MessageBatch:
+      type: object
+      required:
+        - messages
+      properties:
+        messages:
+          type: array
+          description: Array of channel message events to ingest.
+          items:
+            type: object
+    Error:
+      type: object
+      description: Error details returned in JSON format in the response body.
+      properties:
+        message:
+          type: string
+        code:
+          type: integer

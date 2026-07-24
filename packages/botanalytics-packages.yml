@@ -1,0 +1,53 @@
+generated: '2026-07-18'
+method: searched
+source: >-
+  npm, PyPI, Maven Central, RubyGems registries + github.com/botanalytics
+packages:
+  - language: javascript
+    registry: npm
+    name: "@botanalytics/core"
+    version: 3.0.0
+    url: https://www.npmjs.com/package/@botanalytics/core
+    install: npm install @botanalytics/core
+    repository: https://github.com/botanalytics/node-sdk
+    official: true
+    note: >-
+      First-party Node SDK (publisher: botanalytics). Wraps the v2 message
+      ingestion API with per-channel clients (universal, facebook-messenger,
+      amazon-alexa, microsoft-bot-framework, samsung-bixby).
+  - language: python
+    registry: pypi
+    name: botanalytics
+    version: 3.0.0
+    url: https://pypi.org/project/botanalytics/
+    install: pip install botanalytics
+    repository: https://github.com/botanalytics/python-sdk
+    official: true
+    note: "First-party Python SDK (author: Botanalytics, Inc.)."
+  - language: java
+    registry: maven-central
+    name: co.botanalytics:java-sdk-core
+    version: 1.0.0
+    url: https://search.maven.org/artifact/co.botanalytics/java-sdk-core
+    install: "implementation 'co.botanalytics:java-sdk-core:1.0.0'"
+    official: true
+    note: "First-party Java SDK core (group co.botanalytics)."
+  - language: java
+    registry: maven-central
+    name: co.botanalytics:java-sdk-rbm
+    version: 1.0.0
+    url: https://search.maven.org/artifact/co.botanalytics/java-sdk-rbm
+    install: "implementation 'co.botanalytics:java-sdk-rbm:1.0.0'"
+    official: true
+    note: "First-party Java SDK for RCS Business Messaging (RBM)."
+  - language: ruby
+    registry: rubygems
+    name: botanalytics
+    version: 0.2.5
+    url: https://rubygems.org/gems/botanalytics
+    install: gem install botanalytics
+    repository: https://github.com/Botanalyticsco/botanalytics-ruby
+    official: true
+    note: >-
+      First-party Ruby gem (Botanalyticsco org). Targets the earlier 2.x
+      Botanalytics API generation, not v2.

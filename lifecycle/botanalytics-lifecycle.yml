@@ -1,0 +1,23 @@
+generated: '2026-07-18'
+method: searched
+source: >-
+  https://docs.beta.botanalytics.co/ + github.com/botanalytics/node-sdk
+versioning:
+  scheme: uri-path
+  current: v2
+  base_url: https://api.beta.botanalytics.co/v2
+  docs: https://docs.beta.botanalytics.co/docs/integration/rest-api/overview
+stage: beta
+stage_note: >-
+  The v2 Botanalytics API and SDKs (@botanalytics/core 3.x, python botanalytics
+  3.x) are on private beta; the earlier 2.x generation predates it.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: >-
+    No formal deprecation/Sunset policy is published. The 2.x SDK generation is
+    superseded by 3.x but no dated sunset is documented.
+sla:
+  url: null
+status_page: null
+deprecated_operations: []

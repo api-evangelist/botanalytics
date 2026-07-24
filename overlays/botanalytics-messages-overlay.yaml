@@ -1,0 +1,18 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Botanalytics Message Ingestion API
+  version: 1.0.0
+extends: openapi/botanalytics-messages-openapi.yml
+actions:
+  - target: $.info
+    update:
+      x-apievangelist-rating: 3
+      x-apievangelist-notes: >-
+        Reconstructed from first-party SDK source and REST docs; provider does
+        not publish an OpenAPI. Single verified ingestion operation.
+  - target: $.paths./messages.post
+    update:
+      x-idempotency: false
+      x-retry-guidance: >-
+        SDKs retry failed POSTs (default limit 10, 30s timeout). Delivery is
+        at-least-once; there is no server-side idempotency key.

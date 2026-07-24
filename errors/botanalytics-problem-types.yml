@@ -1,0 +1,37 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.beta.botanalytics.co/docs/integration/rest-api/overview
+format: json
+envelope:
+  media_type: application/json
+  note: "Error details returned in JSON format in the response body."
+problems:
+  - status: 200
+    title: OK
+    meaning: Everything worked as expected.
+  - status: 201
+    title: Created
+    meaning: Everything worked as expected; resource created.
+  - status: 400
+    title: Bad Request
+    meaning: The request was unacceptable, often due to missing a required parameter.
+    remediation: Check required parameters and the request body shape.
+  - status: 401
+    title: Unauthorized
+    meaning: You forgot to include your API token or it is wrong.
+    remediation: "Send a valid Botanalytics JWT as `Authorization: Bearer <token>`."
+  - status: 404
+    title: Not Found
+    meaning: The requested resource doesn't exist.
+  - status: 500
+    title: Server Error
+    meaning: Something went wrong on Botanalytics' end.
+  - status: 502
+    title: Server Error
+    meaning: Something went wrong on Botanalytics' end.
+  - status: 503
+    title: Server Error
+    meaning: Something went wrong on Botanalytics' end.
+  - status: 504
+    title: Server Error
+    meaning: Something went wrong on Botanalytics' end.

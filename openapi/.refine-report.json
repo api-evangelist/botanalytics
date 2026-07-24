@@ -1,0 +1,14 @@
+{
+  "provider": "botanalytics",
+  "sources": [
+    "botanalytics-messages-api-openapi.yml"
+  ],
+  "outputs": [
+    "botanalytics-messages-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

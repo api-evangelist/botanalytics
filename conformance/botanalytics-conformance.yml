@@ -1,0 +1,23 @@
+generated: '2026-07-18'
+method: derived
+source: >-
+  openapi/botanalytics-messages-openapi.yml +
+  https://docs.beta.botanalytics.co/docs/integration/rest-api/overview
+standards:
+  - id: jwt-bearer
+    conforms: true
+    evidence: "API key is a JWT sent as Authorization: Bearer (RFC 6750 / RFC 7519)."
+  - id: oauth2
+    conforms: false
+    evidence: No OAuth2 flows; static JWT API keys only.
+  - id: openid-connect
+    conforms: false
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: Errors returned as plain application/json, not application/problem+json.
+  - id: pagination
+    conforms: false
+    evidence: Write-only ingestion surface; no list endpoints.
+  - id: idempotency
+    conforms: false
+    evidence: No idempotency-key header documented.

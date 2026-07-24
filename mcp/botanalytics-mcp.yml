@@ -1,0 +1,17 @@
+generated: '2026-07-18'
+method: derived
+status: candidate
+source: openapi/botanalytics-messages-openapi.yml
+note: >-
+  No official hosted/remote Botanalytics MCP server was found (searched docs,
+  npm @modelcontextprotocol, and MCP registries). This is a DERIVED candidate
+  tool list mapping the verified v2 ingestion operation to an MCP tool.
+server:
+  name: botanalytics
+  transport: http
+tools:
+  - name: log_messages
+    description: >-
+      Submit a batch of conversation message events to Botanalytics for
+      analytics processing.
+    source_operation: openapi/botanalytics-messages-openapi.yml#logMessages

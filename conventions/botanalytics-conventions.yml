@@ -1,0 +1,40 @@
+generated: '2026-07-18'
+method: searched
+source: >-
+  https://docs.beta.botanalytics.co/docs/integration/rest-api/overview +
+  github.com/botanalytics/node-sdk core/src/base.js
+authentication:
+  style: bearer-jwt
+  header: Authorization
+  format: "Bearer <JWT>"
+  detail: >-
+    API key is a JWT with a `channel` claim identifying the source channel.
+  ref: authentication/botanalytics-authentication.yml
+versioning:
+  scheme: uri-path
+  current: v2
+  base_url: https://api.beta.botanalytics.co/v2
+  note: v2 backend is in private beta.
+idempotency:
+  supported: false
+  note: >-
+    No idempotency-key header is documented. The SDK performs client-side
+    retries of failed POSTs (default retry limit 10, 30s request timeout);
+    this is at-least-once delivery, not server-side idempotency.
+pagination:
+  supported: false
+  note: The public ingestion surface is write-only (POST /messages); no listing endpoints are documented.
+error_envelope:
+  format: json
+  media_type: application/json
+  detail: "Error details returned as a JSON object in the response body."
+  ref: errors/botanalytics-problem-types.yml
+request_body:
+  shape: '{ "messages": [ ... ] }'
+  detail: A batch of channel message events is submitted as a `messages` array.
+retries:
+  client_side: true
+  default_limit: 10
+  request_timeout_ms: 30000
+rate_limit_signaling:
+  documented: false
