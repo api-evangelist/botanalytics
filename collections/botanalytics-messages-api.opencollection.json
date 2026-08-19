@@ -1,0 +1,43 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Botanalytics Message Ingestion Messages API",
+    "version": "v2"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Messages",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Log conversation messages",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.beta.botanalytics.co/v2/messages",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Submit a batch of conversation message events to Botanalytics for analytics processing. The Node and Python SDKs wrap this endpoint. Requests are POSTed with a JSON body containing a `messages` array and a Bearer JWT whose `channel` claim identifies the source channel. The SDK retries failed POSTs (default limit 10) with a 30s request timeout."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
