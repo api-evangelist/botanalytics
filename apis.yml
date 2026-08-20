@@ -49,6 +49,8 @@ apis:
   humanURL: https://docs.beta.botanalytics.co/docs/integration/rest-api/overview
   baseURL: https://api.beta.botanalytics.co/v2
   tags:
+  - Message
+  tags_raw:
   - Messages
   properties:
   - type: OpenAPI
