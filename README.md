@@ -64,6 +64,110 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Botanalytics is a company surfaced as a portfolio company of 500-global and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Botanalytics is a conversational analytics platform for AI chatbots and voice assistants. It helps bot builders and product teams measure engagement, understand user intents and natural-language understanding (NLU) quality, segment conversations, identify bottlenecks and drop-off points, and surface audience insights across 20+ languages and multiple messaging and voice channels (Facebook Messenger, Amazon Alexa, Microsoft Bot Framework, Samsung Bixby, and a universal channel). Conversation data is sent either through native no-code integrations, first-party SDKs (Node, Python, Java, Ruby), or a v2 REST ingestion API secured with Bearer JWT API keys. Botanalytics is backed by 500 Global.
 
-Backed by: 500-global — https://botanalytics.co
+**Areas:** Company · Conversational Analytics · Chatbots · Voice Assistant · Bot Analytics · Analytics · Natural Language Understanding · Developer Tools
+
+## Botanalytics on APIs.io
+
+Everything profiled for Botanalytics is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/botanalytics/](https://apis.io/providers/botanalytics/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Botanalytics Messages API](https://apis.io/apis/botanalytics/botanalytics-messages-api/) — The Messages API from Botanalytics — 1 operation(s) for messages.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [botanalytics](https://apis.io/servers/botanalytics/botanalytics/)
+
+#### Collections (1)
+
+Postman and Open Collection request collections.
+
+- [Botanalytics Message Ingestion Messages API](https://apis.io/collections/botanalytics/open-botanalytics-messages-api/)
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Botanalytics Messages Overlay](https://apis.io/overlays/botanalytics/botanalytics-messages-overlay/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Botanalytics Authentication](https://apis.io/security/botanalytics/botanalytics-authentication/)
+- [Botanalytics Domain Security](https://apis.io/security/botanalytics/botanalytics-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://botanalytics.co)
+- [Documentation](https://docs.beta.botanalytics.co/)
+- [Getting started](https://docs.beta.botanalytics.co/docs/integration/sdks/node/getting-started)
+- [API reference](https://docs.beta.botanalytics.co/docs/integration/rest-api/overview)
+- [Sign up](https://tally.so/r/wgq9vM)
+- [Support](https://join.slack.com/t/botanalytics-family/shared_invite/zt-1zfrciqxj-XT5pL0Pl3fDdUPxvQ~APyw)
+- [Terms of service](https://cdn.botanalytics.co/docs/terms.pdf)
+- [Privacy policy](https://cdn.botanalytics.co/docs/privacy.pdf)
+- [GitHub](https://github.com/botanalytics)
+
+## API Evangelist rating
+
+**Kin Score 29.8** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 13.9 |
+| Contract governance | 4.5 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 68.5 |
+| Access clarity | 23.7 |
+
+**Agent readiness 22.1** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | verified |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 20.6** — AI & Biometrics
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/botanalytics/](https://apis.io/providers/botanalytics/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Botanalytics: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/botanalytics/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
